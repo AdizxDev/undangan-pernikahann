@@ -1,0 +1,254 @@
+:root {
+  --sage: #9dc183;
+  --bg: #fff;
+  --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+  min-height: 4000px;
+}
+
+/* Styling untuk Section Gallery */
+#gallery {
+  background-color: #f8f9fa; /* Warna latar belakang lembut */
+  padding: 50px 20px;
+}
+
+#gallery h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#gallery h2 {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Styling untuk gambar */
+#gallery img {
+  border-radius: 15px; /* Membuat sudut gambar melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 80%; /* Perkecil gambar menjadi 80% dari ukuran container */
+  max-width: 250px; /* Maksimal lebar gambar */
+  height: auto; /* Menjaga rasio aspek gambar */
+}
+
+/* Efek saat hover gambar */
+#gallery img:hover {
+  transform: scale(1.05); /* Memperbesar gambar sedikit */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar */
+}
+
+/* Grid responsif */
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Jarak antar elemen */
+  justify-content: center; /* Gambar di tengah */
+}
+
+@media (max-width: 768px) {
+  #gallery img {
+    width: 90%; /* Gambar lebih besar sedikit untuk layar kecil */
+    max-width: 200px; /* Maksimal lebar lebih kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  #gallery img {
+    width: 100%; /* Gambar memenuhi layar pada perangkat kecil */
+    max-width: 180px;
+  }
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 6rem;
+  text-shadow: var(--shadow);
+}
+
+.hero h4 {
+  font-size: 1.5rem;
+  text-shadow: var(--shadow);
+}
+
+.hero a {
+  color: var(--sage);
+  background-color: #fff;
+}
+
+.hero a:hover {
+  background-color: var(--sage);
+  color: #fff;
+}
+
+.time {
+  position: relative;
+  min-height: 100vh;
+}
+
+.time h1 {
+  font-family: "Sacramento", cursive;
+}
+
+.time h4 {
+  font-size: 1rem;
+  padding: 1%;
+}
+
+.time p {
+  color: rgb(210, 134, 40);
+  font-size: 1rem;
+  padding: 1%;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.navbar .navbar-brand {
+  font-family: "Sacramento", cursive;
+}
+
+.info {
+  background-image: url(img/bg-time.jpg);
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.info h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 2.6rem;
+  text-shadow: var(--shadow);
+}
+
+.info h2 {
+  font-family: "Sacramento", cursive;
+  font-size: 4.5rem;
+  margin-top: -1cm;
+  color: rgb(210, 134, 40);
+  text-shadow: var(--shadow);
+}
+
+.info .couple {
+  margin-top: 100px;
+}
+
+.info .couple h3 {
+  font-family: "Sacramento", cursive;
+  font-size: 2.4rem;
+  color: rgb(210, 134, 40);
+  text-shadow: var(--shadow);
+}
+
+.info .couple img {
+  width: 100%;
+}
+
+.gallery {
+  padding-top: 3rem;
+  position: relative;
+  min-height: 100vh;
+}
+
+.gallery h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 2.6rem;
+  text-shadow: var(--shadow);
+}
+
+.gallery h2 {
+  font-family: "Sacramento", cursive;
+  font-size: 4.5rem;
+  margin-top: -1cm;
+  color: rgb(210, 134, 40);
+  text-shadow: var(--shadow);
+}
+
+.gallery img {
+  padding: 3rem;
+  width: 30%;
+}
+
+.rsvp::before {
+  content: "";
+  position: absolute;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/bg-info.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.rsvp .box {
+  margin: 3rem 10rem;
+  padding-top: 3rem;
+}
+
+.rsvp .box h1 {
+  padding-top: 3.5rem;
+  padding-bottom: 2.5rem;
+  font-family: "Sacramento", cursive;
+  font-size: 4.5rem;
+  margin-top: -1cm;
+  color: rgb(210, 134, 40);
+  text-shadow: var(--shadow);
+}
+
+.rsvp .box label {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  color: black;
+  text-shadow: var(--shadow);
+}
+
+footer {
+  padding: 3rem;
+  background-color: #9dc183;
+  color: #fff;
+}
+
+footer a {
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+audio {
+  width: 10%;
+  position: fixed;
+  top: 80%;
+  left: 80%;
+}
